@@ -1,0 +1,9 @@
+{
+    "default": [
+        "echo This is a cool startup task!",
+        "echo IKR!"
+    ],
+    "wifithing": [
+        "netsh wlan show profiles"
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "default": [
+        "press:h",
+        "release:h",
+        "tap:e",
+        "type:llo. I am so cool!",
+        "delay:3",
+        "tap:Key.enter"
+    ],
+    "rickroll": [
+        "delay:1",
+        "press:Key.cmd_l",
+        "delay:0.2",
+        "tap:r",
+        "delay:0.2",
+        "release:Key.cmd_l",
+        "delay:0.3",
+        "type:https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "delay:0.1",
+        "tap:Key.enter"
+    ],
+    "r": [
+        "delay:1.5",
+        "press:Key.cmd_l",
+        "delay:1",
+        "tap:r",
+        "delay:1",
+        "release:Key.cmd_l"
+    ],
+    "test": [
+        "delay:2",
+        "press:r",
+        "delay:0.1",
+        "release:r"
+    ]
+}
