@@ -15,7 +15,7 @@ class Command:
         if self.aliases == []:
             object_aliases = "None"
         else:
-            object_aliases = (" ").join(self.aliases)
+            object_aliases = (", ").join(self.aliases)
 
         return f"{self.name}:\n  Description: {self.description}\n  Arguments: {object_arguments}\n  Aliases: {object_aliases}"
 
@@ -37,20 +37,20 @@ class Command:
         valid_arguments = 0
 
         if len(command_arguments) != len(self.arguments):
-            return "ERROR"
+            return False
 
         for i in range(len(command_arguments)):
             if (str(self.arguments[i]).startswith("<")) and (str(self.arguments[i]).endswith(">")):
                 if str(command_arguments[i]).strip() == ("" or None):
-                    return "ERROR"
+                    return False
                 else:
                     valid_arguments += 1
             elif (str(self.arguments[i]).startswith("[")) and (str(self.arguments[i]).endswith("]")):
                 valid_arguments += 1
             else:
-                return "ERROR"
+                return False
 
         if valid_arguments == len(command_arguments):
-            return "SUCCESS"
+            return True
         else:
-            return "ERROR"
+            return False
